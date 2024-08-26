@@ -1,5 +1,7 @@
 # Simple Personality Quiz
 
+## https://wic-ucsd-project-teams.github.io/personality-quiz/
+
 ## Overview
 
 Welcome to the Simple Personality Quiz! This web application allows users to answer a series of questions to determine if they are more introverted or extroverted. With a clean, responsive design and minimal JavaScript, this quiz is perfect for beginners who are learning HTML, CSS, and JavaScript.
