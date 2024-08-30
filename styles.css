@@ -105,3 +105,13 @@ a:hover {
 .joke-button:hover {
     background-color: #e5533a;
 }
+
+footer {
+    padding-top: 2em;
+}
+
+footer p {
+    color: white;
+    font-size: 1em;
+    text-align: center;
+}
