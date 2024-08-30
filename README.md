@@ -1,4 +1,4 @@
-# Buzzfeed Fun 🎉
+# Buzzfeed Fun 🤩
 
 ## https://wic-ucsd-project-teams.github.io/buzzfeed-page/
 
