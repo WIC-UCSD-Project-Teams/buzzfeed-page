@@ -1,60 +1,106 @@
-/* Apply a pastel gradient background */
 body {
-    background: linear-gradient(135deg, lightblue, lightpink, lightyellow);
-    font-family: Arial, sans-serif; /* Fallback font */
-    margin: 0;
-    padding: 0;
+    background: linear-gradient(45deg, #ff6f61, #d7a5b4);
+    font-family: 'Changa', sans-serif;
+    color: #fff;
+    text-align: center;
+    min-height: 100vh;
+    height: fit-content;
+    margin: unset;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+    margin-top: 1.5em;
+}
+
+a {
+    display: inline-block;
+    margin: 20px;
+    padding: 15px 25px;
+    background-color: #f0a500;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+a:hover {
+    background-color: #f07d2b;
+}
+
+.animal-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#animal-img {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+.interactive-box {
+    min-width: 200px;
+    min-height: 200px;
+    max-width: 300px;
+    max-height: 300px;
+    padding: 1em;
+    background-color: #f4a261;
+    border-radius: 15px;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Basic styling for the quiz container */
-.quiz-container {
-    max-width: 500px;
-    margin: 20px;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+.interactive-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.interactive-box img {
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Style for the quiz heading */
-.quiz-container h1 {
+.joke-box {
+    margin-top: 3em;
     text-align: center;
-    font-size: 36px;
-    color: #333;
-    font-family: 'Honk', cursive; /* Applying the custom font */
+    font-family: 'Roboto', sans-serif;
 }
 
-/* Style for each question */
-.question {
-    margin-bottom: 20px;
-}
-
-/* Style for the submit button */
-button {
-    display: block;
-    width: 100%;
-    padding: 10px;
-    background-color: #4CAF50;
+.joke-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    font-family: 'Changa', sans-serif;
+    cursor: pointer;
+    background-color: #ff6347;
     color: white;
     border: none;
     border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-/* Hover effect for the submit button */
-button:hover {
-    background-color: #45a049;
-}
-
-/* Style for the result display */
-#result {
-    margin-top: 20px;
-    font-size: 18px;
+#joke {
+    font-size: 1em;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(90deg, #007cf0, #013e4c, #007cf0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
-    color: #333;
+    margin-top: 10px;
+    transition: font-size 0.3s ease;
+}
+
+#joke:hover {
+    font-size: 1.5em;
+}
+
+.joke-button:hover {
+    background-color: #e5533a;
 }

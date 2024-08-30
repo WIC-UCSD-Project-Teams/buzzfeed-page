@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Recommendations</title>
+    <!-- Link to Google Fonts for custom font styles -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Changa:wght@400;700&display=swap">
+    <!-- Link to an external CSS file for styling -->
+    <link rel="stylesheet" href="./music-rec-styles.css">
+</head>
+<body>
+    <!-- A div for light effects (will be styled in CSS) -->
+    <div class="light"></div>
+    
+    <!-- A back button to navigate to the previous page -->
+    <a class="back-button" href="../index.html">Back</a>
+    
+    <!-- Main heading of the page -->
+    <h1>Music Recommendations</h1>
+    <p>Enjoy some great tunes! 🎶</p>
+
+    <!-- Container for the music quiz where users select their favorite genre -->
+    <div class="quiz-container">
+        <h2>Select Your Favorite Genre</h2>
+        <!-- Buttons for different genres with data attributes for genre and background color -->
+        <button class="genre-button" data-genre="rap" data-bgcolor="black">Rap</button>
+        <button class="genre-button" data-genre="pop" data-bgcolor="red">Pop</button>
+        <button class="genre-button" data-genre="classical" data-bgcolor="yellow">Classical</button>
+        <button class="genre-button" data-genre="kpop" data-bgcolor="purple">K-Pop</button>
+        <button class="genre-button" data-genre="bollywood" data-bgcolor="orange">Bollywood</button>
+        <button class="genre-button" data-genre="rock" data-bgcolor="green">Rock</button>
+    </div>
+
+    <!-- Embedded Spotify playlist that will update based on user's selection -->
+    <iframe id="playlist" src="https://open.spotify.com/embed/playlist/37i9dQZF1DXcBWIGoYBM5M" width="100%" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+
+    <!-- Link to the external JavaScript file for handling user interaction -->
+    <script src="./musicRecScript.js"></script>
+</body>
+</html>

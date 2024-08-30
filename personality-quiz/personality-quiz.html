@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Personality Quiz</title>
+    <!-- Link to Google Fonts for the custom font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Honk&display=swap">
+    <!-- Link to the external CSS file for styling -->
+    <link rel="stylesheet" href="./personality-quiz-styles.css">
+</head>
+<body>
+    <a class="back-button" href="../index.html">Back</a>
+    <!-- Main container for the quiz -->
+    <div class="quiz-container">
+        <h1>What's Your Personality Type?</h1>
+
+        <!-- Quiz questions -->
+        <form id="quiz-form">
+            <!-- Question 1 -->
+            <div class="question">
+                <p>1. How do you prefer to spend your free time?</p>
+                <label>
+                    <input type="radio" name="q1" value="introvert"> Reading a book
+                </label><br>
+                <label>
+                    <input type="radio" name="q1" value="extrovert"> Hanging out with friends
+                </label>
+            </div>
+
+            <!-- Question 2 -->
+            <div class="question">
+                <p>2. What kind of environment do you thrive in?</p>
+                <label>
+                    <input type="radio" name="q2" value="introvert"> Quiet and calm
+                </label><br>
+                <label>
+                    <input type="radio" name="q2" value="extrovert"> Lively and dynamic
+                </label>
+            </div>
+
+            <!-- Question 3 -->
+            <div class="question">
+                <p>3. How do you prefer to work on a project?</p>
+                <label>
+                    <input type="radio" name="q3" value="introvert"> Independently
+                </label><br>
+                <label>
+                    <input type="radio" name="q3" value="extrovert"> In a team
+                </label>
+            </div>
+
+            <!-- Question 4 -->
+            <div class="question">
+                <p>4. Which of these activities appeals to you more?</p>
+                <label>
+                    <input type="radio" name="q4" value="introvert"> Meditating or journaling
+                </label><br>
+                <label>
+                    <input type="radio" name="q4" value="extrovert"> Attending a party or event
+                </label>
+            </div>
+
+            <!-- Question 5 -->
+            <div class="question">
+                <p>5. How do you feel after spending a lot of time with others?</p>
+                <label>
+                    <input type="radio" name="q5" value="introvert"> Drained, need some alone time
+                </label><br>
+                <label>
+                    <input type="radio" name="q5" value="extrovert"> Energized and happy
+                </label>
+            </div>
+
+            <!-- Submit button -->
+            <button class="submit-button" type="button" onclick="calculateResult()">See Your Result</button>
+        </form>
+
+        <!-- Result display -->
+        <div id="result"></div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="./personalityQuizScript.js"></script>
+</body>
+</html>

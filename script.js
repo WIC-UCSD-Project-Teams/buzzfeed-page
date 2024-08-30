@@ -1,42 +1,46 @@
-// This function calculates the quiz result based on the user's answers
-function calculateResult() {
-    // Get the selected values for each question
-    const q1 = document.querySelector('input[name="q1"]:checked');
-    const q2 = document.querySelector('input[name="q2"]:checked');
-    const q3 = document.querySelector('input[name="q3"]:checked');
-    const q4 = document.querySelector('input[name="q4"]:checked');
-    const q5 = document.querySelector('input[name="q5"]:checked');
+function revealAnimal() {
+    // Get the image element where the animal picture will be displayed
+    const animalImg = document.getElementById('animal-img');
+    
+    // Array containing paths to different animal images
+    const animals = [
+        'images/cat.png',
+        'images/dog.jpeg',
+        'images/fox.jpeg',
+        'images/porcupine.jpg'
+    ];
+    
+    // Generate a random index to select a random animal image from the array
+    const randomIndex = Math.floor(Math.random() * animals.length);
+    
+    // Set the 'src' attribute of the image element to the randomly selected animal image
+    animalImg.src = animals[randomIndex];
+    
+    // Make sure the image is visible by setting its display style to 'block'
+    animalImg.style.display = 'block';
+}
 
-    // Initialize variables to keep track of personality types
-    let introvertCount = 0;
-    let extrovertCount = 0;
+function getJoke() {
+    // Get the paragraph element where the joke will be displayed
+    const jokeElement = document.getElementById('joke');
+    
+    // Display a loading message while fetching the joke
+    jokeElement.innerText = 'Loading...';
 
-    // Check the answers for each question
-    if (q1 && q1.value === 'introvert') introvertCount++;
-    if (q1 && q1.value === 'extrovert') extrovertCount++;
-
-    if (q2 && q2.value === 'introvert') introvertCount++;
-    if (q2 && q2.value === 'extrovert') extrovertCount++;
-
-    if (q3 && q3.value === 'introvert') introvertCount++;
-    if (q3 && q3.value === 'extrovert') extrovertCount++;
-
-    if (q4 && q4.value === 'introvert') introvertCount++;
-    if (q4 && q4.value === 'extrovert') extrovertCount++;
-
-    if (q5 && q5.value === 'introvert') introvertCount++;
-    if (q5 && q5.value === 'extrovert') extrovertCount++;
-
-    // Determine the result based on the counts
-    let resultText = '';
-    if (introvertCount > extrovertCount) {
-        resultText = 'You are more of an Introvert!';
-    } else if (extrovertCount > introvertCount) {
-        resultText = 'You are more of an Extrovert!';
-    } else {
-        resultText = 'You have a balanced personality!';
-    }
-
-    // Display the result on the page
-    document.getElementById('result').innerText = resultText;
+    // Make a GET request to the joke API to fetch a random joke
+    fetch('https://icanhazdadjoke.com/', {
+        headers: {
+            'Accept': 'application/json' // Request JSON format
+        }
+    })
+    .then(response => response.json()) // Parse the JSON from the response
+    .then(data => {
+        // Display the joke text in the paragraph element
+        jokeElement.innerText = data.joke;
+    })
+    .catch(error => {
+        // Display an error message if the fetch fails
+        jokeElement.innerText = 'Oops! Something went wrong. Please try again!';
+        console.error('Error fetching joke:', error); // Log the error to the console
+    });
 }

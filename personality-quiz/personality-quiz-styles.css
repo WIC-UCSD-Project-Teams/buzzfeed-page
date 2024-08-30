@@ -1,0 +1,82 @@
+/* personality-quiz/quiz-styles.css */
+
+/* Apply a pastel gradient background */
+body {
+    background: linear-gradient(175deg, lightblue, lightpink, lightyellow);
+    font-family: Arial, sans-serif; /* Fallback font */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Basic styling for the quiz container */
+.quiz-container {
+    max-width: 500px;
+    margin: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white background */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the quiz heading */
+.quiz-container h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+    font-family: 'Honk', cursive; /* Applying the custom font */
+}
+
+/* Style for each question */
+.question {
+    margin-bottom: 20px;
+}
+
+/* Style for the back button */
+.back-button {
+    text-decoration: none;
+    position: absolute;
+    top: 2em;
+    left: 2em;
+    padding: 10px;
+    background-color: #4784ac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover effect for the back button */
+.back-button:hover {
+    background-color: #2a3c64;
+}
+
+/* Style for the submit button */
+.submit-button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* Hover effect for the submit button */
+.submit-button:hover {
+    background-color: #45a049;
+}
+
+/* Style for the result display */
+#result {
+    margin-top: 20px;
+    font-size: 18px;
+    text-align: center;
+    color: #333;
+}

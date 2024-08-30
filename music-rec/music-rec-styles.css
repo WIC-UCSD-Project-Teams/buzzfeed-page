@@ -1,0 +1,107 @@
+/* Base styling for the entire body of the page */
+body {
+    font-family: 'Changa', sans-serif; /* Use the Changa font for the entire page */
+    background: radial-gradient(circle, rgba(124, 170, 255, 0.804) 20%, rgba(73, 195, 252, 0.5) 80%); /* Apply a radial gradient background */
+    display: flex; /* Use flexbox layout for the body */
+    flex-direction: column; /* Arrange children (elements) in a column */
+    align-items: center; /* Center align elements horizontally */
+}
+
+/* Styling for the main heading (h1) */
+h1 {
+    color: white; /* Set the text color to white */
+    text-align: center; /* Center the text */
+    font-size: 2em; /* Set the font size */
+    margin: 0; /* Remove default margin */
+    margin-top: 2em; /* Add a top margin to give space above the heading */
+}
+
+/* Styling for the paragraph text (p) */
+p {
+    color: white; /* Set the text color to white */
+    text-align: center; /* Center the text */
+    font-size: 1.5em; /* Set the font size */
+    margin: 0; /* Remove default margin */
+}
+
+/* Style for the "Back" button that allows users to navigate back to the previous page */
+.back-button {
+    text-decoration: none; /* Remove underline from the link */
+    position: absolute; /* Position the button absolutely relative to the nearest positioned ancestor */
+    top: 2em; /* Position the button 2em from the top of the page */
+    left: 2em; /* Position the button 2em from the left of the page */
+    padding: 4px 10px; /* Add padding inside the button for spacing */
+    background-color: #ff6f61; /* Set the button background color */
+    color: white; /* Set the text color to white */
+    border: none; /* Remove any border from the button */
+    border-radius: 5px; /* Round the corners of the button */
+    font-size: 16px; /* Set the font size */
+    cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+}
+
+/* Add a hover effect to the "Back" button to change the background color when the user hovers over it */
+.back-button:hover {
+    background-color: #e55b53; /* Darken the background color on hover */
+}
+
+/* Styling for the embedded Spotify playlist (iframe) */
+iframe {
+    margin: 20px; /* Add margin around the iframe */
+    width: 70%; /* Set the iframe width to 70% of the parent element */
+    display: block; /* Display the iframe as a block element */
+}
+
+/* Styling for a glowing light effect at the bottom left of the page */
+.light {
+    position: absolute; /* Position the element absolutely relative to its nearest positioned ancestor */
+    bottom: -8vh; /* Position the element slightly off-screen at the bottom */
+    left: -8vw; /* Position the element slightly off-screen to the left */
+    width: 200px; /* Set the width of the light effect */
+    height: 200px; /* Set the height of the light effect */
+    background: radial-gradient(circle, rgba(29, 0, 245, 0.6), rgba(255, 255, 255, 0) 70%); /* Create a radial gradient for the light effect */
+    border-radius: 50%; /* Make the element a circle */
+    animation: light-shine 3s infinite ease-in-out; /* Apply a continuous animation to create a shining effect */
+    pointer-events: none; /* Make sure the element doesn't interfere with user interactions */
+}
+
+/* Define the keyframes for the light-shine animation */
+@keyframes light-shine {
+    0% {
+        transform: scale(1) translateX(0) translateY(0); /* Initial scale and position */
+        opacity: 0.5; /* Start with partial opacity */
+    }
+    50% {
+        transform: scale(1.5) translateX(-20px) translateY(-20px); /* Increase size and slightly move position */
+        opacity: 1; /* Make the light fully visible */
+    }
+    100% {
+        transform: scale(1) translateX(0) translateY(0); /* Return to the original size and position */
+        opacity: 0.5; /* Fade back to partial opacity */
+    }
+}
+
+/* Styling for the quiz container that holds the genre buttons */
+.quiz-container {
+    text-align: center; /* Center-align the content inside the container */
+    margin: 20px; /* Add margin around the container */
+}
+
+/* Base styling for all genre buttons */
+.genre-button {
+    padding: 10px 20px; /* Add padding inside the buttons */
+    margin: 5px; /* Add margin between the buttons */
+    font-size: 1.2em; /* Set the font size */
+    border: none; /* Remove any border from the buttons */
+    border-radius: 5px; /* Round the corners of the buttons */
+    cursor: pointer; /* Change the cursor to a pointer when hovering over the buttons */
+    color: white; /* Set the text color to white (default for most buttons) */
+}
+
+/* Individual styling for each genre button based on the genre */
+/* Each button has a specific background color based on the genre */
+.genre-button[data-genre="rap"] { background-color: red; }
+.genre-button[data-genre="pop"] { background-color: lightpink; }
+.genre-button[data-genre="classical"] { background-color: rgb(251, 251, 125); color: black; } /* Classical has black text for better contrast */
+.genre-button[data-genre="kpop"] { background-color: rgb(223, 153, 255); }
+.genre-button[data-genre="bollywood"] { background-color: rgb(253, 200, 101); }
+.genre-button[data-genre="rock"] { background-color: rgb(38, 206, 38); }

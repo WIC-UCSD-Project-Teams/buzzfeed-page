@@ -1,20 +1,21 @@
-# Simple Personality Quiz
+# Buzzfeed Fun 🎉
 
-## https://wic-ucsd-project-teams.github.io/personality-quiz/
+## https://wic-ucsd-project-teams.github.io/buzzfeed-page/
 
 ## Overview
 
-Welcome to the Simple Personality Quiz! This web application allows users to answer a series of questions to determine if they are more introverted or extroverted. With a clean, responsive design and minimal JavaScript, this quiz is perfect for beginners who are learning HTML, CSS, and JavaScript.
+Welcome to Buzzfeed Fun, your go-to destination for a variety of interactive quizzes and fun surprises! Whether you're looking to discover your personality type, laugh at a random joke, reveal a cute animal, or get music recommendations, Buzzfeed Fun has something for everyone. 🌟
 
 ## Features
 
-- **5-Question Personality Quiz**: Users answer five questions to discover whether they lean more towards being an introvert or extrovert.
-- **Pastel Gradient Background**: The quiz features a visually appealing background with a pastel gradient of light blue, light pink, and light yellow.
-- **Custom Font**: The title uses the playful "Honk" font from Google Fonts to give the quiz a fun and engaging look.
-- **Minimal JavaScript**: The quiz logic is handled with minimal JavaScript, making it easy to understand and modify.
+- **5-Question Personality Quiz**: Answer five questions to find out whether you're more of an introvert or an extrovert. 🧠✨
+- **Random Joke Generator**: Need a laugh? Click a button to get a random joke from the icanhazdadjoke API. It's a great way to brighten your day! 😂🎤
+- **Cute Animal Reveal**: Click on the interactive box to reveal a random cute animal image. 🐶🐱 You never know which adorable creature you'll get to see!
+- **Spotify Playlist Recommendations**: Get personalized playlist recommendations based on six different music categories. 🎵🎧 Explore new music that fits your taste!
 
 ## Technologies Used
 
-- **HTML/CSS**: Provides the structure and styling of the quiz, ensuring a clean and responsive design.
-- **JavaScript**: Handles the logic for calculating the quiz result based on the user's answers.
-- **Google Fonts**: Integrates the "Honk" font for a custom title style.
+- **HTML/CSS**: Provides the structure and styling of the site, ensuring a clean, responsive, and visually appealing design. The site also uses iframes to embed content seamlessly. 🖥️🎨
+- **JavaScript**: Handles all the interactive features, including calculating quiz results, fetching random jokes, revealing cute animals, and providing music recommendations. 💻🔧
+- **Google Fonts**: Integrates custom fonts like "Roboto" and "Changa" to enhance the visual appeal and readability of the site. 🅰️🔤
+- **API Integration**: The project makes use of the icanhazdadjoke API to fetch random jokes and the Spotify API for music recommendations. 🔄🌐
